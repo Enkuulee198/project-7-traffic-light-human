@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    width: 100wv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 200px;
+    height: 600px;
+    background: linear-gradient(110deg, #303743, #1e242d 40%, #252c36);
+    border-radius: 15px;
+    margin-top: 50px;
+    z-index: 1;
+    box-shadow: 0 0 40px purple;
+}
+.red {
+    border: red 5px solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px red;
+    background-color: rgb(232, 134, 121);
+}
+.yellow {
+    border: yellow 5px solid;    
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px yellow;
+    background-color: rgb(196, 212, 19);
+}
+.green {
+    border: green 5px solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px green;
+    background-color: rgb(49, 161, 49);
+}
+.bot {
+    mask: url("./human-clean.png") center / contain no-repeat;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: movement 3s linear infinite;
+    position: absolute;
+    z-index: -1;
+}
+.bot-1 {
+    mask: url("./human-clean.png") center / contain no-repeat;
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: movement-1 3s linear infinite;
+    position: absolute;
+    z-index: -1;
+}
+.bot-2 {
+    mask: url("./human-clean.png") center / contain no-repeat;
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: movement-2 3s linear infinite;
+    position: absolute;
+    z-index: -1;
+}
+@keyframes movement {
+    0% {
+        top: 100px;
+    }
+    50% {
+        top:500px ;
+    }
+    100% {
+        top:100px;
+    }
+}
+@keyframes movement-1 {
+    0% {
+        top: -100px;
+    }
+    50% {
+        top:300px ;
+    }
+    100% {
+        top:-100px;
+    }
+}
+@keyframes movement-2 {
+    0% {
+        top: -300px;
+    }
+    50% {
+        top:100px ;
+    }
+    100% {
+        top:-300px;
+    }
+}
